@@ -65,3 +65,9 @@ Contributions to the Short-Form Script Generator are welcome! Feel free to fork 
 ## License
 
 This project has been created for demo purposes.
+
+## Screenshots of the Demo
+
+![Screenshot 2024-01-29 at 15 20 38](https://github.com/3zz3/short-form-script-generator/assets/63882209/d3d10125-5fd3-4c0b-a302-de16074f4188)
+![Screenshot 2024-01-29 at 14 06 49](https://github.com/3zz3/short-form-script-generator/assets/63882209/3ac37232-322c-490c-ad4a-27cede1e8d38)
+
