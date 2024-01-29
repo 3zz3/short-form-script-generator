@@ -13,28 +13,8 @@ def load_openai_api_key(config_path='config.json'):
     except Exception as e:
         logging.error(f"Failed to load OpenAI API key: {e}")
         raise
-#
-# def generate_script(prompt, model="gpt-4", temperature=1, max_tokens=700):
-#     try:
-#         completion = openai.ChatCompletion.create(
-#             model=model,
-#             messages=[
-#                 {"role": "system", "content": prompt},
-#                 {"role": "user", "content": "Generate 1 script"}
-#             ],
-#             temperature=temperature,
-#             max_tokens=max_tokens
-#         )
-#         return completion.choices[0].message.content
-#     except openai.OpenAIError as e:
-#         logging.error(f"OpenAI API error: {e}")
-#         raise
-#     except Exception as e:
-#         logging.error(f"Unexpected error: {e}")
-#         raise
-#
 
-
+# Generate 1 script, using the model_prompt and configuring the model to preferences
 def generate_voiceover(model_prompt, model="gpt-4", temperature=1, max_tokens=700):
     try:
         completion = openai.chat.completions.create(
@@ -51,6 +31,7 @@ def generate_voiceover(model_prompt, model="gpt-4", temperature=1, max_tokens=70
         logging.error(f"Unexpected error: {e}")
         return None, e
 
+# Generate more than 1 script, user allowed to decide in GUI, using the model_prompt and configuring the model to preferences
 def generate_voiceovers(model_prompt, n, model="gpt-4", temperature=1, max_tokens=700):
     scripts_data = []
     for i in range(n):

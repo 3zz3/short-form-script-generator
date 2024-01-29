@@ -5,6 +5,7 @@ from data_processing import extract_text_from_pdf, save_to_excel
 from ui_elements import generate_sidebar, display_script
 import logging
 
+# Main function
 def main():
     # Configure logging
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -60,6 +61,7 @@ def main():
     End of Script
     """
 
+    # Display items based on user's menu choice
     if menu_choice == "Script Generator":
         st.title("ScriptCraft: AI-Powered Short-Form Script Generation")
 
@@ -82,9 +84,13 @@ def main():
             save_to_excel(scripts_data)
             st.success("Scripts generated successfully.")
             # Further processing of scripts_data as needed
+
     elif menu_choice == "Metrics accuracy":
+        # Page to display hugging face models accuracy scores - unable to complete, but these scores can be found in the
+        # spreadsheet or in the Script Generator page
         st.title("Model Metrics Accuracy")
         st.error("Please see hugging face emotion-text-classification open source models accuracies in the Script Generator page or in the spreadsheet. As due to time constraints, this function is not yet available in Streamlit.")
+
 
 if __name__ == "__main__":
     main()
